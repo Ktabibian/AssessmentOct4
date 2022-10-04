@@ -1,13 +1,11 @@
 package redo;
 
 public class PlaneTicket extends Ticket{
-    public PlaneTicket(int id, String origin, String destination, String seatNumber, double price) {
+    protected boolean isFrequentFlyer;
+
+    public PlaneTicket(int id, String origin, String destination, String seatNumber, double price, boolean isFrequentFlyer) {
         super(id, origin, destination, seatNumber, price);
-    }
-
-
-    protected boolean isFrequentFlyer(){
-        return true;
+        this.isFrequentFlyer = isFrequentFlyer;
     }
 
     @Override
